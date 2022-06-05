@@ -1,4 +1,26 @@
 {
+  "categories": [
+    {
+      "id": 1,
+      "name": "note"
+    },
+    {
+      "id": 2,
+      "name": "youtube"
+    },
+    {
+      "id": 3,
+      "name": "podcast"
+    },
+    {
+      "id": 4,
+      "name": "code"
+    },
+    {
+      "id": 5,
+      "name": "link"
+    }
+  ],
   "feed": [
     {
       "type": "note",
