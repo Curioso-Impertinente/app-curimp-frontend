@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NavigationItem from './NavigationItem';
-import classNames from './MainHeader.module.css'
 
 import logo from '../../assets/logo_temp.png'
 import { Button, Navbar } from 'flowbite-react';
