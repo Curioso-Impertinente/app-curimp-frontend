@@ -13,7 +13,7 @@ const Feed = ({ posts }) => {
     console.log(postList)
 
     return (
-        <div class="container mx-auto">
+        <div class="container mx-auto p-4">
             {postList}
         </div>
     );

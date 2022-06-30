@@ -5,8 +5,8 @@ const NoteCard = ({link, body}) => {
 
     return (
         <Card>
-            <div>
-                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${link}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div className='video-container'>
+                <iframe className="w-full aspect-video" src={`https://www.youtube.com/embed/${link}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p className="font-normal text-gray-700 dark:text-gray-400">
                 {body}

@@ -1,24 +1,23 @@
 import React from 'react';
 import NoteCard from '../Note/NoteCard';
 import YoutubeCard from '../Youtube/YoutubeCard';
+import SpotifyCard from '../Spotify/SpotifyCard';
+import CodeCard from '../Code/CodeCard';
 
 const PostItem = (props) => {
 
-    // const postType = () => {
-    //     if (post.type === "note") {
-    //         return <NoteCard title={post.title} body={post.body} />
-    //     }
-    // }
+    let postType = ((props) => {
+        if (props.type === "note") return <NoteCard {...props} />
+        if (props.type === 'youtube') return <YoutubeCard {...props} />
+        if (props.type === 'spotify') return <SpotifyCard {...props} />
+        if (props.type === 'code') return <CodeCard {...props} />
+    })(props)
 
-    let postType = null
-
-    if (props.type === "note") {
-        postType = <NoteCard {...props} />
-    } else if (props.type === 'youtube') {
-        postType = <YoutubeCard {...props} />
-    }
-
-    return postType
+    return (
+        <div className='mt-4'>
+            {postType}
+        </div>
+    )
 };
 
 export default PostItem;

@@ -3,10 +3,9 @@ import React from 'react';
 import NavigationItem from './NavigationItem';
 
 import logo from '../../assets/logo_temp.png'
-import { Button, Navbar } from 'flowbite-react';
+import {  Navbar } from 'flowbite-react';
 
 const MainHeader = ({ categories }) => {
-    console.log(categories)
 
     const categoryList = categories.map((category) => (
         <NavigationItem
@@ -26,13 +25,10 @@ const MainHeader = ({ categories }) => {
                     alt="Curioso Impertinente Logo"
                 />
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                    Flowbite
+                    Curioso Impertinente
                 </span>
             </Navbar.Brand>
             <div className="flex md:order-2">
-                <Button>
-                    Get started
-                </Button>
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
