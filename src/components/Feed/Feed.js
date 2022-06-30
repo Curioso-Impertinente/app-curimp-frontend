@@ -7,9 +7,11 @@ const Feed = ({ posts }) => {
     const postList = posts.map((post) => (
         <PostItem
             key={post.id}
-            post={post}
+            {...post}
         />
     ))
+    console.log(postList)
+
     return (
         <div class="container mx-auto">
             {postList}

@@ -1,8 +1,8 @@
 import React from 'react';
 import NoteCard from '../Note/NoteCard';
+import YoutubeCard from '../Youtube/YoutubeCard';
 
-const PostItem = ({post}) => {
-    console.log(1, post)
+const PostItem = (props) => {
 
     // const postType = () => {
     //     if (post.type === "note") {
@@ -12,12 +12,13 @@ const PostItem = ({post}) => {
 
     let postType = null
 
-    if (post.type == "note") {
-        postType = <NoteCard title={post.title} body={post.body} />
+    if (props.type === "note") {
+        postType = <NoteCard {...props} />
+    } else if (props.type === 'youtube') {
+        postType = <YoutubeCard {...props} />
     }
-    return (
-        {postType}
-    );
+
+    return postType
 };
 
 export default PostItem;
